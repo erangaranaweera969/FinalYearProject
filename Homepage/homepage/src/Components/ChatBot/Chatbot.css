@@ -1,0 +1,207 @@
+/* Global Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Arial", sans-serif;
+}
+
+/* Page Styling */
+.chatbot-page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  height: 100vh;
+  background: linear-gradient(135deg, #4682B4, #0047AB);
+}
+
+/* Navigation Bar - Adjusted to prevent overlapping */
+.nav-bar {
+  width: 100%;
+  background: rgba(0, 0, 0, 0.7);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 15px 5%; /* Adjusted padding */
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+}
+
+/* Logo Section - Ensuring enough space around logo */
+.logo {
+  display: flex;
+  align-items: center;
+  margin-right: 30px; /* Increased right margin */
+}
+
+.logo img {
+  width: 50px;
+  height: auto;
+}
+
+.logo h1 {
+  color: white;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+/* Navigation Links - Adjusted spacing */
+.nav-links {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.nav-links a {
+  color: white;
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: bold;
+  padding: 8px 15px; /* Increased padding to ensure clickable area */
+  transition: color 0.3s ease-in-out;
+}
+
+.nav-links a:hover {
+  color: #00d4ff;
+}
+
+/* Responsive adjustments for better layout on small screens */
+@media (max-width: 600px) {
+  .nav-bar {
+      flex-direction: column;
+      padding: 10px;
+  }
+
+  .logo {
+      margin-bottom: 10px; /* Adds space between logo and navigation links */
+  }
+
+  .nav-links {
+      flex-direction: column;
+      align-items: center;
+  }
+
+  .nav-links a {
+      display: block;
+      width: 100%;
+      text-align: center;
+  }
+}
+
+
+
+/* 🔹 Chatbot Container */
+.chatbot-container {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  border-radius: 15px;
+  padding: 20px;
+  width: 400px;
+  height: 550px;
+  margin-top: 120px;
+  box-shadow: 0px 4px 15px rgba(255, 255, 255, 0.2);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Chatbot Header */
+.chatbot-header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: white;
+  margin-bottom: 15px;
+}
+
+.chatbot-icon {
+  width: 50px;
+  height: auto;
+}
+
+/* 🔹 Chat Window */
+.chat-window {
+  width: 100%;
+  height: 350px;
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 10px;
+  padding: 15px;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  box-shadow: inset 0px 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Chat Messages */
+.chat-message {
+  max-width: 80%;
+  padding: 10px;
+  border-radius: 8px;
+  font-size: 14px;
+}
+
+.user {
+  align-self: flex-end;
+  background: #00d4ff;
+  color: white;
+  text-align: right;
+}
+
+.bot {
+  align-self: flex-start;
+  background: #0047AB;
+  color: white;
+}
+
+/* 🔹 Chat Input & Send Button */
+.chat-input-container {
+  display: flex;
+  width: 100%;
+  margin-top: 15px;
+}
+
+.chat-input-container input {
+  flex: 1;
+  padding: 12px;
+  font-size: 16px;
+  border: none;
+  border-radius: 8px 0 0 8px;
+  outline: none;
+  background: white;
+}
+
+.send-button {
+  padding: 12px 20px;
+  border: none;
+  background: #00d4ff;
+  color: white;
+  font-weight: bold;
+  border-radius: 0 8px 8px 0;
+  cursor: pointer;
+  transition: 0.3s ease-in-out;
+}
+
+.send-button:hover {
+  background: #009ec3;
+}
+
+/* 🔹 Responsive Design */
+@media (max-width: 600px) {
+  .chatbot-container {
+      width: 90%;
+      height: 500px;
+  }
+  
+  .chat-input-container input {
+      font-size: 14px;
+  }
+  
+  .send-button {
+      padding: 10px 15px;
+  }
+}

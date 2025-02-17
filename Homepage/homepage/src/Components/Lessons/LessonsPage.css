@@ -1,0 +1,340 @@
+/* ===============================
+   General Page Styling
+================================= */
+.lessonsContainer {
+  width: 100vw;
+  min-height: 100vh;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  font-family: 'Arial', sans-serif;
+  color: #ffffff;
+  background: linear-gradient(120deg, #0047AB, #4682B4);
+  position: relative;
+  overflow-x: hidden;
+  transition: background 0.3s ease-in-out;
+}
+
+/* Dark Mode */
+.lessonsContainer.dark {
+  background: linear-gradient(120deg, #002855, #1E3A8A);
+}
+
+/* ===============================
+ Logo Styling
+================================= */
+.lessonsLogo {
+  position: absolute;
+  top: 15px;
+  left: 20px;
+}
+
+.lessonsLogo img {
+  width: 150px;
+  height: auto;
+}
+
+/* ===============================
+ Header Section
+================================= */
+.lessonsHeader {
+  text-align: center;
+  margin-top: 80px;
+  animation: fadeIn 1.2s ease-in-out;
+}
+
+.lessonsHeader h1 {
+  font-size: 2.8rem;
+  font-weight: bold;
+  color: #ffffff;
+  text-transform: uppercase;
+}
+
+.lessonsHeader p {
+  font-size: 1.2rem;
+  margin-top: 10px;
+  color: #e0e0e0;
+}
+
+/* ===============================
+ Language Selection (Carousel)
+================================= */
+.languageNav {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 30px;
+}
+
+.languageCarousel {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+}
+
+.languageTile {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 15px;
+  padding: 15px;
+  text-align: center;
+  cursor: pointer;
+  transition: transform 0.3s ease, background 0.3s ease;
+}
+
+.languageTile img {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+}
+
+.languageTile p {
+  margin-top: 8px;
+  font-weight: bold;
+  color: #ffffff;
+}
+
+.languageTile:hover {
+  background: rgba(255, 255, 255, 0.3);
+  transform: scale(1.05);
+}
+
+/* ===============================
+ Lesson List Section
+================================= */
+.lessonList {
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(8px);
+  padding: 20px;
+  border-radius: 12px;
+  margin-top: 20px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  width: 80%;
+  text-align: center;
+}
+
+.lessonList h2 {
+  color: #ffffff;
+  font-size: 1.8rem;
+  margin-bottom: 15px;
+}
+
+.lessonList ul {
+  list-style: none;
+  padding: 0;
+  color: #e0e0e0;
+}
+
+.lessonList li {
+  margin: 10px 0;
+}
+
+/* ===============================
+ Progress Bar
+================================= */
+.progressContainer {
+  margin-top: 15px;
+}
+
+.progressBar {
+  width: 100%;
+  height: 10px;
+  background: #ffffff;
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+.progressBar::-webkit-progress-bar {
+  background: #ddd;
+}
+
+.progressBar::-webkit-progress-value {
+  background: #0047AB;
+}
+
+.progressText {
+  margin-top: 5px;
+  font-size: 1rem;
+  font-weight: bold;
+}
+
+/* Lesson Completion Badge */
+.completionBadge {
+  background: #2ecc71;
+  padding: 10px 15px;
+  border-radius: 8px;
+  margin-top: 10px;
+  color: white;
+  font-weight: bold;
+}
+
+/* ===============================
+ Buttons
+================================= */
+.startLessonBtn,
+.completeLessonBtn {
+  background: #ffffff;
+  color: #0047AB;
+  font-size: 1rem;
+  font-weight: bold;
+  padding: 12px 20px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: transform 0.2s ease-in-out, background 0.3s ease;
+  margin: 10px;
+  border: none;
+}
+
+.startLessonBtn:hover,
+.completeLessonBtn:hover {
+  background: #e0e0e0;
+  transform: scale(1.05);
+}
+
+/* ===============================
+ Quiz Icons Section
+================================= */
+.quizIconsSection {
+  text-align: center;
+  margin-top: 30px;
+}
+
+.quizIcons {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+}
+
+.quizIconCard {
+  background: rgba(255, 255, 255, 0.15);
+  border-radius: 12px;
+  padding: 15px;
+  text-align: center;
+  transition: transform 0.3s ease-in-out;
+}
+
+.quizIconCard:hover {
+  transform: scale(1.05);
+}
+
+.quizIconCard img {
+  width: 70px;
+  height: 70px;
+  margin-bottom: 10px;
+}
+
+.quizBtn {
+  background: #ffffff;
+  color: #0047AB;
+  padding: 8px 12px;
+  font-weight: bold;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: transform 0.3s ease-in-out, background 0.3s ease;
+  border: none;
+}
+
+.quizBtn:hover {
+  background: #e0e0e0;
+  transform: scale(1.05);
+}
+
+/* ===============================
+ Footer Section
+================================= */
+.footer {
+  width: 100%;
+  margin-top: 30px;
+  background: #0047AB;
+  padding: 20px 0;
+  text-align: center;
+  color: white;
+}
+
+.footerContent {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.footerInfo p,
+.footerContact p {
+  margin: 5px 0;
+}
+
+.footerLinks a {
+  color: white;
+  margin: 0 10px;
+  text-decoration: none;
+}
+
+.footerLinks a:hover {
+  text-decoration: underline;
+}
+
+/* Social Media Icons */
+.footerSocialIcons {
+  margin-top: 15px;
+}
+
+.socialIcon {
+  font-size: 1.5rem;
+  margin: 0 10px;
+  cursor: pointer;
+  transition: color 0.3s ease-in-out;
+}
+
+.socialIcon:hover {
+  color: #e0e0e0;
+}
+
+/* ===============================
+ Theme Toggle Button
+================================= */
+.themeToggle {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: #ffffff;
+  color: #0047AB;
+  padding: 12px;
+  font-weight: bold;
+  border-radius: 8px;
+  cursor: pointer;
+  border: none;
+  transition: transform 0.3s ease-in-out;
+}
+
+.themeToggle:hover {
+  transform: scale(1.1);
+}
+
+/* ===============================
+ Animations
+================================= */
+@keyframes fadeIn {
+  0% { opacity: 0; transform: translateY(-10px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+
+/* ===============================
+ Responsive Design
+================================= */
+@media (max-width: 768px) {
+  .languageCarousel {
+      flex-direction: column;
+      gap: 10px;
+  }
+
+  .quizIcons {
+      flex-direction: column;
+      align-items: center;
+  }
+
+  .footerContent {
+      flex-direction: column;
+      text-align: center;
+  }
+}
